@@ -2,22 +2,22 @@
 # Powerline
 #--------------------------------------------------------------------------------------------------
 format = """
-[](#77E689)\
+[](#3F6CAD)\
 $sudo\
 $username\
-[](bg:#56b6c2 fg:#77E689)\
+[](bg:#553976 fg:#3F6CAD)\
 $directory\
-[](fg:#56b6c2 bg:#cc3e44)\
+[](fg:#553976 bg:#2F88FF)\
 $git_branch\
 $git_status\
-[](fg:#cc3e44 bg:#528bff)\
+[](fg:#2F88FF bg:#8853C7)\
 $nodejs\
 $rust\
 $python\
 $package\
-[](fg:#528bff bg:#e37933)\
+[](fg:#8853C7 bg:#B65685)\
 $time\
-[ ](fg:#e37933)\
+[ ](fg:#B65685)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -26,12 +26,12 @@ $time\
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#77E689"
-style_root = "bg:#77E689"
+style_user = "bg:#3F6CAD fg:#DCEFFF"
+style_root = "bg:#3F6CAD fg:#DCEFFF"
 format = '[$user ]($style)'
 
 [directory]
-style = "bg:#56b6c2"
+style = "bg:#553976 fg:#DCEFFF"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -39,11 +39,11 @@ truncation_symbol = "…/"
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = " "
+"Documents" = " "
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-"Source" = ""
+"Source" = ""
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -52,35 +52,35 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#cc3e44"
+style = "bg:#2F88FF fg:#DCEFFF"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#cc3e44"
+style = "bg:#2F88FF fg:#DCEFFF"
 format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#528bff"
+style = "bg:#8853C7 fg:#DCEFFF"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#528bff"
+style = "bg:#8853C7 fg:#DCEFFF"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
 symbol = ""
-style = "bg:#528bff"
+style = "bg:#8853C7 fg:#DCEFFF"
 format = '[ $symbol ($version) ($virtualenv) ]($style)'
 
 [package]
 symbol = ""
-style = "bg:#528bff"
+style = "bg:#8853C7 fg:#DCEFFF"
 format = '[$symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#e37933"
+style = "bg:#B65685 fg:#DCEFFF"
 format = '[  $time ]($style)'

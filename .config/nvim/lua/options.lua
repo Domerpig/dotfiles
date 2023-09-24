@@ -17,4 +17,4 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.autochdir = true
 
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd[[colorscheme nord]]
