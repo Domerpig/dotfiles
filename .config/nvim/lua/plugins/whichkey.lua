@@ -44,7 +44,7 @@ return {
               },
               f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
               i = { "<cmd>LspInfo<cr>", "Info" },
-              I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+              I = { "<cmd>Mason<cr>", "Installer Info" },
               j = {
                 "<cmd>lua vim.diagnostic.goto_next()<CR>",
                 "Next Diagnostic",
@@ -85,7 +85,6 @@ return {
                   "Diff",
                 },
               },
-            
 
             ----- Search -----
             s = {
@@ -101,7 +100,26 @@ return {
                   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
                   "Find files",
                 },
-              }
+              },
+
+            ----- DAP -----
+            d = {
+                name = "Debug",
+                t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+                b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+                c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+                C = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
+                d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
+                g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+                i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+                o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+                u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+                p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+                r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+                s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
+                q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+                U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
+            }
         }
 
         ---------------------
