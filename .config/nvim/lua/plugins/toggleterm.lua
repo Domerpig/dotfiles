@@ -35,18 +35,18 @@ return {
             vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
             vim.api.nvim_buf_set_keymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
           end
-          
+
           vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-          
+
           local Terminal = require("toggleterm.terminal").Terminal
           local gitui = Terminal:new({ cmd = "gitui", hidden = true })
-          
+
           function _GITUI_TOGGLE()
               gitui:toggle()
           end
-          
+
           local htop = Terminal:new({ cmd = "htop", hidden = true })
-          
+
           function _HTOP_TOGGLE()
               htop:toggle()
           end
