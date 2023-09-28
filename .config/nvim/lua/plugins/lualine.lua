@@ -20,13 +20,13 @@ return {
       update_in_insert = false,
       always_visible = true,
     }
-    
+
     local diff = {
       "diff",
       colored = true,
       symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
     }
-    
+
     local progress = function()
       local current_line = vim.fn.line(".")
       local total_lines = vim.fn.line("$")
@@ -35,12 +35,12 @@ return {
       local index = math.ceil(line_ratio * #chars)
       return chars[index]
     end
-    
-    
+
+
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'nord',
+        theme = 'auto',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
