@@ -19,7 +19,7 @@ return {
         }
 
         local mappings = {
-            ["/"] = {"<Plug>(comment_toggle_linewise_current)", "Comment toggle current line"},
+            ["#"] = {"<Plug>(comment_toggle_linewise_current)", "Comment toggle current line"},
             ["b"] = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
                      "Buffers"},
             ["e"] = {"<cmd>Neotree toggle<cr>", "Explorer"},
@@ -39,7 +39,7 @@ return {
               name = "LSP",
               a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
               d = { "<cmd>Telescope diagnostics<cr>", "LSP Diagnostics" },
-              f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+              f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
               i = { "<cmd>LspInfo<cr>", "Info" },
               j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
               k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
@@ -103,7 +103,7 @@ return {
             ----- Plugins -----
             p = {
              p = { "<cmd>Lazy<cr>", "Plugin manager" },
-             I = { "<cmd>Mason<cr>", "Installer Info" }
+             m = { "<cmd>Mason<cr>", "Installer Info" }
             }
         }
 
