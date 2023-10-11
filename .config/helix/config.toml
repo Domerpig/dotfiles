@@ -1,0 +1,14 @@
+theme = "nightfox"
+
+[editor]
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+right = ["diagnostics", "file-encoding", "selections", "position"]
+
+[editor.file-picker]
+hidden = false
