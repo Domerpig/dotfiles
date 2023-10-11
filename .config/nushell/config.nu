@@ -769,4 +769,5 @@ $env.config = {
 
 alias ll = ls -l
 alias dotfiles = git --git-dir=/home/dominik/dotfiles/ --work-tree=/home/dominik/
+alias hx = helix
 use ~/.cache/starship/init.nu
