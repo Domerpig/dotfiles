@@ -1,0 +1,83 @@
+[module/audio]
+type = internal/pulseaudio
+use-ui-max = false
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 5px
+format-volume-foreground = ${color.fg}
+format-volume-background = ${color.mb}
+
+label-muted = 󰝟 muted
+label-muted-foreground = ${color.red}
+label-muted-background = ${color.mb}
+label-muted-padding = 5px
+
+ramp-volume-0 = 󰕿
+ramp-volume-1 = 󰖀
+ramp-volume-2 = 󰕾
+
+click-right = pavucontrol
+
+;;===============================================;;
+[module/menu]
+type=custom/text
+content = ""
+content-padding = 1
+content-foreground = ${color.green}
+click-left = ~/.config/rofi/launchers/type-6/launcher.sh
+
+;;===============================================;;
+[module/cpu]
+type = internal/cpu
+format-foreground = ${color.fg}
+format-background = ${color.mb}
+label =  %percentage%%
+label-padding = 5px
+
+label-warn =  %percentage%%
+format-warn-foreground = ${color.red}
+format-warn-background = ${color.mb}
+
+;;===============================================;;
+[module/network]
+type = internal/network
+interface = enp8s0
+
+format-connected = <label-connected>
+format-connected-foreground = ${color.green}
+format-connected-background = ${color.mb}
+label-connected = 󰁅%downspeed% 󰁝%upspeed%
+label-connected-padding = 5px
+
+;;===============================================;;
+[module/ram]
+type = internal/memory
+
+label =  %percentage_used%%
+label-padding = 5px
+format-foreground = ${color.fg}
+format-background = ${color.mb}
+format-warn-background = ${color.red}
+click-left = pavucontrol
+
+;;===============================================;;
+[module/date]
+type = internal/date
+interval = 5.0
+date = %d.%m.%y%
+time = %H:%M
+
+format = <label>
+label = 󰥔 %time% 󰸗 %date%
+label-padding = 5px
+format-foreground = ${color.fg}
+format-background = ${color.mb}
+
+;;===============================================;;
+[module/workspaces]
+type = internal/xworkspaces
+
+label-active = %name%
+label-active-background = ${color.mb}
+label-active-foreground = &{color.fg}
+label-active-padding = 8px
