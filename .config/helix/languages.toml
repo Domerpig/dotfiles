@@ -4,3 +4,10 @@ auto-format = true
 
 [[language]]
 "name" = "css"
+
+[[language]]
+"name" = "bash"
+
+[[language]]
+name = "python"
+language-server = { command = "ruff-lsp" }
