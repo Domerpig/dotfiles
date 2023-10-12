@@ -18,3 +18,9 @@
 ///////////////                     ///// 
 ```
 </div>
+
+
+Clone Repo
+```
+git clone --bare git@github.com:Domerpig/dotfiles.git %HOME/dotfiles
+```
