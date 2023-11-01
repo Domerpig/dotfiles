@@ -13,11 +13,9 @@
 # is used in the bar {} block below.
 font pango:monospace 12
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-exec --no-startup-id autorandr default
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 4480x0 --rotate right --output DP-2 --primary --mode 2560x1440 --pos 1920x240 --rotate normal --output DP-4 --mode 1920x1080 --pos 0x420 --rotate normal
 exec --no-startup-id feh --bg-fill ~/.wallpapers/tokyonight.jpg
+exec --not-startup-id polybar
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -186,20 +184,3 @@ bindsym Mod1+r mode "resize"
 # Window Borders
 default_border pixel
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.config/i3/config (or $XDG_CONFIG_HOME/i3/config if set) or
-# ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-exec i3-config-wizard
