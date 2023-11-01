@@ -2,63 +2,50 @@
 type = internal/pulseaudio
 use-ui-max = false
 
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume><label-volume>
 format-volume-padding = 5px
 format-volume-foreground = ${color.fg}
-format-volume-background = ${color.mb}
+
+label-volume-padding = 5px
 
 label-muted = 󰝟 muted
 label-muted-foreground = ${color.red}
-label-muted-background = ${color.mb}
 label-muted-padding = 5px
 
 ramp-volume-0 = 󰕿
 ramp-volume-1 = 󰖀
 ramp-volume-2 = 󰕾
+ramp-volume-foreground = ${color.blue}
 
 click-right = pavucontrol
-
-;;===============================================;;
-[module/menu]
-type=custom/text
-content = ""
-content-padding = 1
-content-foreground = ${color.green}
-click-left = ~/.config/rofi/launchers/type-6/launcher.sh
 
 ;;===============================================;;
 [module/cpu]
 type = internal/cpu
 format-foreground = ${color.fg}
-format-background = ${color.mb}
-label =  %percentage%%
-label-padding = 5px
+format-padding = 10px
+label = %percentage%%
+label-padding = 10px
+
+format-prefix = 
+format-prefix-foreground = ${color.green}
 
 label-warn =  %percentage%%
 format-warn-foreground = ${color.red}
 format-warn-background = ${color.mb}
 
 ;;===============================================;;
-[module/network]
-type = internal/network
-interface = enp8s0
-
-format-connected = <label-connected>
-format-connected-foreground = ${color.green}
-format-connected-background = ${color.mb}
-label-connected = 󰁅%downspeed% 󰁝%upspeed%
-label-connected-padding = 5px
-
-;;===============================================;;
 [module/ram]
 type = internal/memory
 
-label =  %percentage_used%%
-label-padding = 5px
+label =  %percentage_used%%
+label-padding = 10px
+format-prefix = 
+format-prefix-foreground = ${color.pink}
 format-foreground = ${color.fg}
-format-background = ${color.mb}
-format-warn-background = ${color.red}
-click-left = pavucontrol
+format-padding = 10px
+format-warn-prefix = 
+format-warn-prefix-foreground = {color.red}
 
 ;;===============================================;;
 [module/date]
@@ -68,16 +55,40 @@ date = %d.%m.%y%
 time = %H:%M
 
 format = <label>
-label = 󰥔 %time% 󰸗 %date%
+label = %{F#dbc074}󰥔%{F-} %time% %{F#63cdcf}󰸗%{F-} %date%
 label-padding = 5px
 format-foreground = ${color.fg}
-format-background = ${color.mb}
+
+label-time = %time%
+label-date = %date%
 
 ;;===============================================;;
 [module/workspaces]
 type = internal/xworkspaces
 
 label-active = %name%
-label-active-background = ${color.mb}
-label-active-foreground = &{color.fg}
+label-active-background = ${color.green}
+label-active-foreground = ${color.fg}
 label-active-padding = 8px
+
+;;===============================================;;
+[module/cpu-temp]
+type = internal/temperature
+
+format = <ramp><label>
+format-padding = 10px
+label = %temperature-c%
+label-padding = 5px
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+ramp-0-foreground = ${color.blue}
+ramp-1-foreground = ${color.yellow}
+ramp-2-foreground = ${color.red}
+
+base-temperature = 50
+warn-temperature = 80
+
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon3/temp1_input
