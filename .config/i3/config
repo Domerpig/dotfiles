@@ -14,8 +14,8 @@
 font pango:monospace 12
 
 exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 4480x0 --rotate right --output DP-2 --primary --mode 2560x1440 --pos 1920x240 --rotate normal --output DP-4 --mode 1920x1080 --pos 0x420 --rotate normal
-exec --no-startup-id feh --bg-fill ~/.wallpapers/tokyonight.jpg
-exec --not-startup-id polybar
+exec --no-startup-id feh --bg-fill ~/.wallpapers/fox.jpg
+exec_always --no-startup-id ~/.config/i3/polybar.sh
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -184,3 +184,13 @@ bindsym Mod1+r mode "resize"
 # Window Borders
 default_border pixel
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #ffffff #285577 #ffffff #719cd6   #719cd6
+client.focused_inactive #333333 #5f676a #ffffff #39506d   #39506d
+client.unfocused        #333333 #222222 #888888 #39506d   #39506d
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+gaps inner 10px
