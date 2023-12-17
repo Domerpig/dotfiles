@@ -10,7 +10,7 @@ zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumb
 zypper dup --from packman-essentials --allow-vendor-change | echo 'a'
 
 # Install Packages
-zypper -n install gcc-c++ git kitty gitui starship ripgrep helix polybar bottom flatpak spotify-easyrpm npm nushell
+zypper -n install gcc-c++ git kitty gitui starship ripgrep helix polybar bottom spotify-easyrpm npm nushell lldb flatpak
 
 flatpak install -y --noninteractive flathub com.logseq.Logseq
 
