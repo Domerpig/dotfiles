@@ -1,0 +1,67 @@
+{
+  "position": "top",
+  "layer": "top",
+  "output": "DP-5",
+  "height": 20,
+  "modules-left": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "memory",
+    "cpu",
+    "clock",
+    "custom/powermenu"
+  ],
+  "clock": {
+    "interval": 10,
+    "format": "<span color ='#e0af68'>󰃰</span> {:%H:%M} |",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "weeks-pos": "left",
+      "format": {
+        "months": "<span color='#a9b1d6'><b>{}</b></span>",
+        "days": "<span color='#c0caf5'><b>{}</b></span>",
+        "weeks": "<span color='#7aa2f7'><b>W{}</b></span>",
+        "weekdays": "<span color='#7dcfff'><b>{}</b></span>",
+        "today": "<span color='#9ece6a'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+        "on-scroll-down": "shift_up",
+        "on-scroll-up": "shift_down"
+    }
+  },
+  "cpu": {
+    "format": "<span color ='#9ece6a'></span>  {usage}%",
+    "interval": 3
+  },
+  "memory": {
+    "format": "<span color ='#bb9af7'></span>  {percentage}% |"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "5": ""
+    },
+    "persistent-workspaces": {
+      "DP-5": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "custom/powermenu": {
+   "format": "<span color ='#f7768e'>⏻</span>",
+   "on-click": "~/.config/rofi/powermenu/type-6/powermenu.sh"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  }
+}
