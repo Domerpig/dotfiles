@@ -102,6 +102,7 @@ return {
 
             ----- Plugins -----
             p = {
+             name = "Plugins",
              p = { "<cmd>Lazy<cr>", "Plugin manager" },
              m = { "<cmd>Mason<cr>", "Installer Info" }
             }
