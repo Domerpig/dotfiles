@@ -15,6 +15,6 @@ vim.opt.swapfile = false
 vim.opt.cmdheight = 2
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 
 vim.cmd[[colorscheme ayu]]
