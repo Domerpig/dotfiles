@@ -3,6 +3,7 @@ local wezterm = require 'wezterm'
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 -- This is where you actually apply your config choices
 config.default_cursor_style = 'BlinkingBar'
@@ -13,6 +14,16 @@ config.keys = {
     key = 'r',
     mods = 'CMD|SHIFT',
     action = wezterm.action.ReloadConfiguration,
+  },
+  {
+    key = 'v',
+    mods = 'CTRL',
+    action = act.PasteFrom 'Clipboard'
+  },
+  {
+    key = 'v',
+    mods = 'CTRL',
+    action = act.PasteFrom 'PrimarySelection'
   },
 }
 -- For example, changing the color scheme:
