@@ -1,10 +1,9 @@
 [color]
-bg = #181926
-fg = #cdcecf
-mb = #7aa2f7
-red = #c94f6d
-green = #81b29a
-yellow = #dbc074
-blue = #719cd6
-pink = #9d79d6
-teal = #63cdcf
+bg = #282828
+fg = #fbf1c7
+red = #cc241d
+green = #b8bb26
+yellow = #d79921
+blue = #458588
+pink = #b16286
+teal = #689d6a

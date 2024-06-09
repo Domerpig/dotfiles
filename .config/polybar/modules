@@ -32,7 +32,6 @@ format-prefix-foreground = ${color.green}
 
 label-warn =  %percentage%%
 format-warn-foreground = ${color.red}
-format-warn-background = ${color.mb}
 
 ;;===============================================;;
 [module/ram]
@@ -55,7 +54,7 @@ date = %d.%m.%y%
 time = %H:%M
 
 format = <label>
-label = %{F#dbc074}󰥔%{F-} %time% %{F#63cdcf}󰸗%{F-} %date%
+label = %{F#d79921}󰥔%{F-} %time% %{F#458588}󰸗%{F-} %date%
 label-padding = 5px
 format-foreground = ${color.fg}
 
@@ -67,7 +66,7 @@ label-date = %date%
 type = internal/xworkspaces
 
 label-active = %name%
-label-active-background = ${color.green}
+label-active-background = ${color.teal}
 label-active-foreground = ${color.fg}
 label-active-padding = 8px
 
