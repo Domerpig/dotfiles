@@ -17,4 +17,3 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.autochdir = false
 
-vim.cmd[[colorscheme ayu]]

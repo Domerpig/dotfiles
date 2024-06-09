@@ -1,11 +1,6 @@
 return {
-  "Shatur/neovim-ayu",
+  "ellisonleao/gruvbox.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
-  config = function()
-    require('ayu').setup{
-      mirage = true
-    }
-  end
 }

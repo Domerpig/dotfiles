@@ -44,7 +44,7 @@ return {
               j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
               k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic" },
               l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-              q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+              q = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Quickfix" },
               r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
               R = { "<cmd>Telescope lsp_references<cr>", "References"},
               s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
@@ -120,7 +120,7 @@ return {
             nowait = true -- use `nowait` when creating keymaps
         }
         local vmappings = {
-            ["/"] = {"<ESC><CMD>lua require(\"Comment.api\").toggle.linewise(vim.fn.visualmode())<CR>", "Comment toggle selected lines"}
+            ["#"] = {"<ESC><CMD>lua require(\"Comment.api\").toggle.linewise(vim.fn.visualmode())<CR>", "Comment toggle selected lines"}
         }
 
         local which_key = require("which-key")
