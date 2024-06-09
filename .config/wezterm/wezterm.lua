@@ -27,7 +27,7 @@ config.keys = {
   },
 }
 -- For example, changing the color scheme:
-config.color_scheme = 'Ayu Mirage'
+config.color_scheme = 'GruvboxDark'
 
 -- and finally, return the configuration to wezterm
 return config
