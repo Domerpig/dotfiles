@@ -2,22 +2,22 @@
 # Powerline
 #--------------------------------------------------------------------------------------------------
 format = """
-[](#6dcbfa)\
+[](#458588)\
 $sudo\
 $username\
-[](bg:#f28779 fg:#6dcbfa)\
+[](bg:#cc241d fg:#458588)\
 $directory\
-[](fg:#f28779 bg:#a6cc70)\
+[](fg:#cc241d bg:#98971a)\
 $git_branch\
 $git_status\
-[](fg:#a6cc70 bg:#cfbafa)\
+[](fg:#98971a bg:#b16286)\
 $nodejs\
 $rust\
 $python\
 $package\
-[](fg:#cfbafa bg:#ffcc66)\
+[](fg:#b16286 bg:#d79921)\
 $time\
-[ ](fg:#ffcc66)\
+[ ](fg:#d79921)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -26,12 +26,12 @@ $time\
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#6dcbfa fg:#FFFFFF"
-style_root = "bg:#6dcbfa fg:#FFFFFF"
+style_user = "bg:#458588 fg:#fbf1c7"
+style_root = "bg:#458588 fg:#fbf1c7"
 format = '[$user ]($style)'
 
 [directory]
-style = "bg:#ed8274 fg:#FFFFFF"
+style = "bg:#cc241d fg:#fbf1c7"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -52,35 +52,35 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#a6cc70 fg:#FFFFFF"
+style = "bg:#98971a fg:#fbf1c7"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#a6cc70 fg:#FFFFFF"
+style = "bg:#98971a fg:#fbf1c7"
 format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:##cfbafa fg:#FFFFFF"
+style = "bg:##b16286 fg:#fbf1c7"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#cfbafa fg:#FFFFFF"
+style = "bg:#b16286 fg:#fbf1c7"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
 symbol = ""
-style = "bg:#cfbafa fg:#FFFFFF"
+style = "bg:#b16286 fg:#fbf1c7"
 format = '[ $symbol ($version) ($virtualenv) ]($style)'
 
 [package]
 symbol = ""
-style = "bg:#cfbafa fg:#FFFFFF"
+style = "bg:#b16286 fg:#fbf1c7"
 format = '[$symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#ffcc66 fg:#FFFFFF"
+style = "bg:#d79921 fg:#fbf1c7"
 format = '[  $time ]($style)'
