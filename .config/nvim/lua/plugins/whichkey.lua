@@ -24,7 +24,7 @@ return {
                      "Buffers"},
             ["e"] = {"<cmd>Neotree toggle<cr>", "Explorer"},
             ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-            ["f"] = { "<cmd>lua require('telescope.builtin').live_grep({search_dirs={vim.fn.expand('%:p')}})<cr>", "Find Text within open file" },
+            ["f"] = { "<cmd>lua require('telescope.builtin').live_grep({sorting_strategy='ascending',search_dirs={vim.fn.expand('%:p')}})<cr>", "Find Text within open file" },
 
             ----- Terminal -----
             t = {
