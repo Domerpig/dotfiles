@@ -38,7 +38,8 @@ exec spotify
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg $HOME/.wallpapers/nightfox.jpeg fill
+output * bg $HOME/.wallpapers/zelda-full.jpg fill
+output $horizontalDisplay bg $HOME/.wallpapers/od_fuck_u_nvidia_green.png fill
 #
 # Example configuration:
 #
@@ -50,8 +51,13 @@ output $mainDisplay position 1920,0
 output $horizontalDisplay position 4480,-240 transform 90
 
 # Assign Apps to workspaces
-assign [class="Spotify"] workspace number 5
+assign [class="Spotify"] workspace number 3
 assign [app_id="firefox"] workspace number 2
+assign [class="obsidian"] workspace number 4
+assign [app_id="foot"] workspace number 1
+
+for_window [app_id="foot"] opacity set 0.9
+for_window [title="Library" app_id="firefox"] floating enable
 
 # Set displays for workspaces
 workspace 1 output $mainDisplay
@@ -129,6 +135,9 @@ input type:keyboard {
 #
 # Workspaces:
 #
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -151,8 +160,10 @@ input type:keyboard {
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
+
+    # Move workspace
+    bindsym $mod+Control+Right move workspace to output right
+    bindsym $mod+Control+Left move workspace to output left
 #
 # Layout stuff:
 #
