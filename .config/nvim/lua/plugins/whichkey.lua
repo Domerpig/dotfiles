@@ -23,7 +23,7 @@ return {
             ["b"] = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
                      "Buffers"},
             ["e"] = {"<cmd>Neotree toggle<cr>", "Explorer"},
-            ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+            ["F"] = { "<cmd>lua require('telescope.builtin').live_grep({sorting_strategy='ascending'})<cr>", "Find Text" },
             ["f"] = { "<cmd>lua require('telescope.builtin').live_grep({sorting_strategy='ascending',search_dirs={vim.fn.expand('%:p')}})<cr>", "Find Text within open file" },
 
             ----- Terminal -----
@@ -38,7 +38,7 @@ return {
             l = {
               name = "LSP",
               a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-              d = { "<cmd>Telescope diagnostics<cr>", "LSP Diagnostics" },
+              d = { "<cmd>lua require('telescope.builtin').diagnostics({sorting_strategy='ascending'})<cr>", "LSP Diagnostics" },
               f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
               i = { "<cmd>LspInfo<cr>", "Info" },
               j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
@@ -46,9 +46,9 @@ return {
               l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
               q = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Quickfix" },
               r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-              R = { "<cmd>Telescope lsp_references<cr>", "References"},
-              s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-              S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols" }
+              R = { "<cmd>lua require('telescope.builtin').lsp_references({sorting_strategy='ascending'})<cr>", "References"},
+              s = { "<cmd>lua require('telescope.builtin').lsp_document_symbols({sorting_strategy='ascending'})<cr>", "Document Symbols" },
+              S = { "<cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols({sorting_strategy='ascending'})<cr>", "Workspace Symbols" }
             },
 
             ----- git -----
