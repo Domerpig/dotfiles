@@ -39,8 +39,8 @@ window#waybar {
 }
 
 #cpu,
-#tray,
-#custom-powermenu{
+#custom-powermenu,
+#tray {
   margin-left: 0px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;

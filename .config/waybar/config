@@ -5,7 +5,6 @@
         "output": "DP-5",
         "height": 20,
         "modules-left": [
-            "custom/powermenu",
             "sway/workspaces"
         ],
         "modules-center": [
@@ -15,7 +14,7 @@
             "memory",
             "cpu",
             "clock",
-            "tray"
+            "custom/powermenu"
         ],
         "clock": {
             "interval": 10,
@@ -49,32 +48,30 @@
             "format": "{icon}",
             "format-icons": {
                 "5": ""
-            },
-            "persistent-workspaces": {
-                "DP-5": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5
-                ]
             }
         },
         "custom/powermenu": {
             "format": "<span color ='#ef5f6b'>⏻</span>",
             "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
         },
-        "pulseaudio/slider": {
-            "min": 0,
-            "max": 100,
-            "orientation": "horizontal"
+        "wireplumber": {
+            "format": "{volume}%",
+            "format-muted": "",
+            "on-click": "helvum",
+            "max-volume": 150,
+            "scroll-step": 0.2
         },
         "custom/spotify": {
             "format": "<span color = '#1DB954'></span> {}",
-            "max-length": 40,
+            "max-length": 50,
             "exec": "$HOME/.config/waybar/scripts/spotify.sh",
             "exec-if": "pgrep spotify",
-            "interval": 1
+            "interval": 1,
+            "escape": true,
+            "on-click": "playerctl play-pause"
+        },
+        "tray": {
+            "show-passive-items": true
         }
     },
     {
