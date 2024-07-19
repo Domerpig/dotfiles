@@ -8,6 +8,11 @@ return {
         vim.o.timeout = true
         vim.o.timeoutlen = 300
     end,
+    opts = {
+         triggers = {
+             { "<leader>", mode = { "n", "v" } },
+         }
+    },
     config = function()
         local wk = require("which-key")
         wk.add({
@@ -37,17 +42,17 @@ return {
             ----- git -----
             { "<leader>g", group="git"},
             { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc="Next Hunk"},
-            { "<leader>lk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc="Prev Hunk"},
-            { "<leader>ll", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc="Blame"},
-            { "<leader>lp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc="Preview Hunk"},
-            { "<leader>lr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc="Reset Hunk"},
-            { "<leader>lR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc="Reset Buffer"},
-            { "<leader>ls", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc="Stage Hunk"},
-            { "<leader>lu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc="Undo Stage Hunk"},
-            { "<leader>lo", "<cmd>Telescope git_status<cr>", desc="Open changed file"},
-            { "<leader>lb", "<cmd>Telescope git_branches<cr>", desc="Checkout branch"},
-            { "<leader>lc", "<cmd>Telescope git_commits<cr>", desc="Checkout commit"},
-            { "<leader>ld", "<cmd>Gitsigns diffthis HEAD<cr>", desc="Diff"},
+            { "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc="Prev Hunk"},
+            { "<leader>gl", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc="Blame"},
+            { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc="Preview Hunk"},
+            { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc="Reset Hunk"},
+            { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc="Reset Buffer"},
+            { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc="Stage Hunk"},
+            { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc="Undo Stage Hunk"},
+            { "<leader>go", "<cmd>Telescope git_status<cr>", desc="Open changed file"},
+            { "<leader>gb", "<cmd>Telescope git_branches<cr>", desc="Checkout branch"},
+            { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc="Checkout commit"},
+            { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc="Diff"},
             ----- Search -----
             { "<leader>s", group="Search"},
             { "<leader>sb", "<cmd>Telescope git_branches<cr>", desc="Checkout branch"},
@@ -73,5 +78,9 @@ return {
                { "<leader>#", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', desc = "Comment toggle selected lines", mode = "v", nowait = true, remap = false },
             }
         })
+
+        local opts = {
+            debug = true
+        }
     end
 }
