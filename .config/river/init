@@ -10,7 +10,6 @@ exec kanshi default&
 exec waybar &
 exec swaybg -i ~/.wallpapers/zelda-full.jpg -m fill -o "AOC 2470W GGJGCHA013780" -m fill -i ~/.wallpapers/od_fuck_u_nvidia_green.png &
 exec spotify &
-exec ~/.config/scripts/session_river.sh &
 
 # Terminal
 riverctl map normal Alt Return spawn foot
