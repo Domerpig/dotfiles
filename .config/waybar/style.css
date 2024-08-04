@@ -47,18 +47,22 @@ window#waybar {
   margin-right: 10px
 }
 
+#tags button,
 #workspaces button {
   color: #c0caf5;
 }
 
+#tags button.occupied,
 #workspaces button.visible {
   color: #5ab0f6;
 }
 
+#tags button.focused,
 #workspaces button.focused {
   color: #97ca72;
 }
 
+#tags button.urgent,
 #workspaces button.urgent {
   color: #ef5f6b;
 }

@@ -2,10 +2,10 @@
     {
         "position": "top",
         "layer": "top",
-        "output": "DP-5",
+        "output": "Acer Technologies VG270U P 0x912094FE",
         "height": 20,
         "modules-left": [
-            "sway/workspaces"
+            "river/tags"
         ],
         "modules-center": [
             "custom/spotify"
@@ -72,6 +72,9 @@
         },
         "tray": {
             "show-passive-items": true
+        },
+        "river/tags": {
+            "num-tags": 5
         }
     },
     {
@@ -80,8 +83,11 @@
         "output": "Acer Technologies VG270 TEGEE0018512",
         "height": 18,
         "modules-right": [
-            "sway/workspaces"
-        ]
+            "river/tags"
+        ],
+        "river/tags": {
+            "num-tags": 5
+        }
     },
     {
         "position": "top",
@@ -89,7 +95,10 @@
         "output": "AOC 2470W GGJGCHA013780",
         "height": 18,
         "modules-left": [
-            "sway/workspaces"
-        ]
+            "river/tags"
+        ],
+        "river/tags": {
+            "num-tags": 5
+        }
     }
 ]
