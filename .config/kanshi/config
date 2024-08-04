@@ -1,0 +1,17 @@
+output "Acer Technologies VG270U P 0x912094FE" alias $mainDisplay
+output  "Acer Technologies VG270 TEGEE0018512" alias $secondaryDisplay
+output "AOC 2470W GGJGCHA013780" alias $horizontalDisplay
+
+
+profile default {
+    output $secondaryDisplay {
+        position 0,180
+    }
+    output $mainDisplay {
+        position 1920,0
+    }
+    output $horizontalDisplay {
+        position 4480,-240
+        transform 270
+    }
+}
