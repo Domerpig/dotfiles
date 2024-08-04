@@ -6,16 +6,17 @@ mainDisplay="Acer Technologies VG270U P 0x912094FE"
 secondaryDisplay="Acer Technologies VG270 TEGEE0018512"
 horizontalDisplay="AOC 2470W GGJGCHA013780"
 
-exec kanshi &
+exec kanshi default&
 exec waybar &
 exec swaybg -i ~/.wallpapers/zelda-full.jpg -m fill -o "AOC 2470W GGJGCHA013780" -m fill -i ~/.wallpapers/od_fuck_u_nvidia_green.png &
 exec spotify &
-exex ~/.config/scripts/session_river.sh &
+exec ~/.config/scripts/session_river.sh &
 
-# Alt+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
+# Terminal
 riverctl map normal Alt Return spawn foot
 
-riverctl map normal Alt D spawn "/home/dominik/.config/rofi/launchers/type-2/launcher.sh"
+# Launcher
+riverctl map normal Alt D spawn "wmenu-run"
 
 # Alt+Q to close the focused view
 riverctl map normal Alt Q close
@@ -132,7 +133,7 @@ riverctl focus-follows-cursor normal
 riverctl set-repeat 40 300
 riverctl keyboard-layout de
 
-riverctl rule-add -app-id "org.mozilla.firefox" output "${secondaryDisplay}"
+riverctl rule-add -app-id "Firefox" output "${secondaryDisplay}"
 riverctl rule-add -app-id "foot" output "${mainDisplay}"
 riverctl rule-add -app-id "Spotify" output "${horizontalDisplay}"
 riverctl rule-add -app-id "obsidian" output "${mainDisplay}"
