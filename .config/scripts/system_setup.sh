@@ -1,22 +1,17 @@
 #!/bin/env bash
 
 # Add necessary repos
-if [[ $(lspci | rg VGA) == *"NVIDIA"* ]]; then
-  zypper -n addrepo --refresh 'https://download.nvidia.com/opensuse/leap/$releasever' NVIDIA
+if [[ $(lspci | grep VGA) == *"NVIDIA"* ]]; then
+    xbps-install -y void-repo-nonfree void-repo-multilib
 fi
-zypper -n addrepo https://download.opensuse.org/repositories/shells/openSUSE_Tumbleweed/shells.repo | echo 'a'
 
-zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/' packman-essentials
-zypper dup --from packman-essentials --allow-vendor-change | echo 'a'
-
+xbps-install -Syu
 # Install Packages
-zypper -n install gcc-c++ git kitty gitui starship ripgrep helix bottom spotify-easyrpm npm nushell lldb flatpak tokei waybar dunst
+xbps-install -y gcc gdb curl linux-headers nvidia seatd starship ripgrep neovim fish-shell waybar  \
+    wmenu foot lswlt kanshi noto-fonts-ttf river fzf zoxide git unzip elogind polkit dunst tokei   \
+    wl-clipboard firefox dumb_runtime_dir dumb_runtime_dir dbus nextcloud-client
 
-flatpak install -y --noninteractive flathub com.logseq.Logseq
+usermod -aG _seatd dominik
 
-# Install language servers
-npm i -g bash-language-server vscode-langservers-extracted
-pip install ruff-lsp --break-system-packages
-
-# Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# # Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
