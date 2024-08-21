@@ -1,68 +1,73 @@
 * {
-  font-family: 'Fira Code Nerd Font';
-  font-size: 16px;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 15px;
   padding: 0px;
   margin: 0px;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: #181b20;
-  color: #abb2bf;
+  background-color: #1F1F28;
+  color: #DCD7BA;
+}
+
+tooltip {
+    background : #16161D;
+    border: 1px solid #C8C093;
 }
 
 #clock,
 #memory,
 #cpu,
-#workspaces,
 #custom-spotify,
-#tray,
-#custom-powermenu{
-  background-color: #31353f;
-  margin-top: 5px;
-  margin-bottom: 5px;
+#tags,
+#custom-xbps,
+#custom-weather {
+  background-color: #363646;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #custom-spotify,
-#workspaces {
-  border-radius: 15px;
-  margin-left: 5px;
+#tags,
+#custom-xbps{
+  border-radius: 5px;
 }
 
 #memory,
-#clock {
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+#custom-weather {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   padding-right: 0px;
 }
 
 #cpu,
-#custom-powermenu,
-#tray {
-  margin-left: 0px;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  margin-right: 10px
+#clock {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#custom-xbps,
+#cpu {
+    margin-right: 10px;
 }
 
 #tags button,
 #workspaces button {
-  color: #c0caf5;
+  color: #DCD7BA;
 }
 
 #tags button.occupied,
 #workspaces button.visible {
-  color: #5ab0f6;
+  color: #7FB4CA;
 }
 
 #tags button.focused,
 #workspaces button.focused {
-  color: #97ca72;
+  color: #98BB6C;
 }
 
 #tags button.urgent,
 #workspaces button.urgent {
-  color: #ef5f6b;
+  color: #FF5D62;
 }

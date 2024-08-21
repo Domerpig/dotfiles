@@ -11,25 +11,26 @@
             "custom/spotify"
         ],
         "modules-right": [
+            "custom/xbps",
             "memory",
             "cpu",
-            "clock",
-            "custom/powermenu"
+            "custom/weather",
+            "clock"
         ],
         "clock": {
             "interval": 10,
-            "format": "<span color ='#d99a5e'>󰃰</span> {:%H:%M} |",
+            "format": "<span color='#FF9E64'>󰃰</span> {:%H:%M}",
             "tooltip-format": "<tt><small>{calendar}</small></tt>",
             "calendar": {
                 "mode": "month",
                 "on-scroll": 1,
                 "weeks-pos": "left",
                 "format": {
-                    "months": "<span color='#a9b1d6'><b>{}</b></span>",
-                    "days": "<span color='#c0caf5'><b>{}</b></span>",
-                    "weeks": "<span color='#719cd6'><b>W{}</b></span>",
-                    "weekdays": "<span color='#7dcfff'><b>{}</b></span>",
-                    "today": "<span color='#97ca72'><b><u>{}</u></b></span>"
+                    "months": "<span color='#E6C384'><b>{}</b></span>",
+                    "days": "<span color='#DCD7BA'><b>{}</b></span>",
+                    "weeks": "<span color='#7E9CD8'><b>W{}</b></span>",
+                    "weekdays": "<span color='#7AA89F'><b>{}</b></span>",
+                    "today": "<span color='#98BB6C'><b><u>{}</u></b></span>"
                 }
             },
             "actions": {
@@ -38,21 +39,17 @@
             }
         },
         "cpu": {
-            "format": "<span color ='#97ca72'></span>  {usage}%",
+            "format": "<span color ='#98BB6C'></span>  {usage}%",
             "interval": 3
         },
         "memory": {
-            "format": "<span color ='#ca72e4'></span>  {percentage}% |"
+            "format": "<span color ='#D27E99'></span>  {used}GB |"
         },
         "sway/workspaces": {
             "format": "{icon}",
             "format-icons": {
                 "5": ""
             }
-        },
-        "custom/powermenu": {
-            "format": "<span color ='#ef5f6b'>⏻</span>",
-            "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
         },
         "wireplumber": {
             "format": "{volume}%",
@@ -63,7 +60,7 @@
         },
         "custom/spotify": {
             "format": "<span color = '#1DB954'></span> {}",
-            "max-length": 50,
+            "max-length": 60,
             "exec": "$HOME/.config/waybar/scripts/spotify.sh",
             "exec-if": "pgrep spotify",
             "interval": 1,
@@ -75,6 +72,27 @@
         },
         "river/tags": {
             "num-tags": 5
+        },
+        "custom/xbps": {
+            "format": "{} ",
+            "return-type": "json",
+            "tooltip": true,
+            "exec": "~/.config/waybar/scripts/xbps-updates.sh",
+            "signal": 4
+        },
+        "custom/weather": {
+            "exec": "${HOME}/.config/waybar/scripts/weather.sh Andernach",
+            "return-type": "json",
+            "format": "{icon} {} |",
+            "format-icons": [
+                "<span color = '#DCD7BA'></span>",
+                "<span color = '#A3D4D5'></span>",
+                "<span color = '#98BB6C'></span>",
+                "<span color = '#FFA066'></span>",
+                "<span color = '#E46876'></span>"
+            ],
+            "tooltip": true,
+            "interval": 600
         }
     },
     {
