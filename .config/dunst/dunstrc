@@ -5,16 +5,16 @@ follow = mouse
 font = "Fira Code Nerd Font 12"
 
 [urgency_low]
-    background = "#282c34"
-    foreground = "#abb2bf"
+    background = "#223249"
+    foreground = "#DCD7BA"
     frame_color = "#56b6c2"
 
 [urgency_normal]
-    background = "#282c34"
+    background = "#223249"
     foreground = "#abb2bf"
-    frame_color = "#56b6c2"
+    frame_color = "#6A9589"
 
 [urgency_critical]
-    background = "#282c34"
-    foreground = "#d19a66"
-    frame_color = "#e86671"
+    background = "#223249"
+    foreground = "#C34043"
+    frame_color = "#E82424"

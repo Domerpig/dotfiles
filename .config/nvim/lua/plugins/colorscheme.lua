@@ -1,13 +1,13 @@
 return {
-  "navarasu/onedark.nvim",
-  name = "onedark",
+  "rebelot/kanagawa.nvim",
+  name = "kanagawa",
   lazy = false,
   priority = 1000,
   opts = {},
   config = function()
-    require("onedark").setup {
-      style = "cool"
-    }
-    require("onedark").load()
+    -- require("onedark").setup {
+    --   style = "cool"
+    -- }
+    require("kanagawa").load()
   end
 }
