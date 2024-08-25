@@ -1,6 +1,6 @@
-local lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
 
-lsp.rust_analyzer.setup({
+lspconfig.rust_analyzer.setup({
     flags = flags,
     capabilities = capabilities,
     on_attach = on_attach,
@@ -30,4 +30,15 @@ lspconfig.clangd.setup({
       ,'.git'
       ),
     single_file_support = true,
+})
+
+lspconfig.pyright.setup({
+    capabilities = capabilities,
+    settings = {
+        python = {
+            analysis = {
+                ignore = { '*' }
+            }
+        }
+    }
 })

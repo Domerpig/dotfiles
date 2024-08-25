@@ -34,6 +34,7 @@ M.setup = function()
   }
 
   vim.diagnostic.config(config)
+  vim.lsp.set_log_level('debug')
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
@@ -80,7 +81,6 @@ local function lsp_keymaps(bufnr)
   )
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<cr>", {buffer=0})
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
 end
 
 M.on_attach = function(client, bufnr)
