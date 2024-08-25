@@ -6,16 +6,19 @@ mainDisplay="Acer Technologies VG270U P 0x912094FE"
 secondaryDisplay="Acer Technologies VG270 TEGEE0018512"
 horizontalDisplay="AOC 2470W GGJGCHA013780"
 
-exec kanshi default&
+exec kanshi default &
 exec waybar &
-exec swaybg -i ~/.wallpapers/zelda-full.jpg -m fill -o "AOC 2470W GGJGCHA013780" -m fill -i ~/.wallpapers/od_fuck_u_nvidia_green.png &
+exec swaybg -i ~/.wallpapers/zelda-full.jpg -m fill -o "${horizontalDisplay}" -m fill -i ~/.wallpapers/od_fuck_u_nvidia_green.png &
+exec dunst &
 exec spotify &
+exec Obsidian --disable-gpu &
 
 # Terminal
 riverctl map normal Alt Return spawn foot
 
 # Launcher
-riverctl map normal Alt D spawn "wmenu-run"
+riverctl map normal Alt D spawn "wmenu-run -i -l 5"
+riverctl map normal Alt P spawn "${HOME}/.config/scripts/powermenu.sh"
 
 # Alt+Q to close the focused view
 riverctl map normal Alt Q close
@@ -87,13 +90,13 @@ riverctl map normal Alt+Shift 0 set-view-tags $all_tags
 riverctl map normal Alt Space toggle-float
 
 # Alt+F to toggle fullscreen
-riverctl map normal Alt F toggle-fullscreen
+riverctl map normal Alt+Shift F toggle-fullscreen
 
 # Alt+{Up,Right,Down,Left} to change layout orientation
-riverctl map normal Alt Up    send-layout-cmd rivertile "main-location top"
-riverctl map normal Alt Right send-layout-cmd rivertile "main-location right"
-riverctl map normal Alt Down  send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Alt Left  send-layout-cmd rivertile "main-location left"
+riverctl map normal Alt+Control Up    send-layout-cmd rivertile "main-location top"
+riverctl map normal Alt+Control Right send-layout-cmd rivertile "main-location right"
+riverctl map normal Alt+Control Down  send-layout-cmd rivertile "main-location bottom"
+riverctl map normal Alt+Control Left  send-layout-cmd rivertile "main-location left"
 
 # Declare a passthrough mode. This mode has only a single mapping to return to
 # normal mode. This makes it useful for testing a nested wayland compositor
@@ -135,7 +138,7 @@ riverctl keyboard-layout de
 riverctl rule-add -app-id "Firefox" output "${secondaryDisplay}"
 riverctl rule-add -app-id "foot" output "${mainDisplay}"
 riverctl rule-add -app-id "Spotify" output "${horizontalDisplay}"
-riverctl rule-add -app-id "obsidian" output "${mainDisplay}"
+riverctl rule-add -app-id "obsidian" output "${horizontalDisplay}"
 
 # Make all views with an app-id that starts with "float" and title "foo" start floating.
 riverctl rule-add -app-id 'float*' -title 'foo' float
