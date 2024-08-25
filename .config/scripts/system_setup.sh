@@ -14,7 +14,7 @@ fi
 # Install Packages
 xbps-install -y gcc gdb curl seatd starship ripgrep neovim fish-shell waybar wmenu foot lswlt      \
     kanshi noto-fonts-ttf river fzf zoxide git unzip elogind polkit dunst tokei wl-clipboard       \
-    firefox dumb_runtime_dir dumb_runtime_dir dbus nextcloud-client zellij bottom
+    firefox dumb_runtime_dir dumb_runtime_dir dbus nextcloud-client zellij bottom python3-pip
 
 usermod -aG _seatd dominik
 
