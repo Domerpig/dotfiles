@@ -7,7 +7,9 @@ return {
     config = function()
         require('mason').setup()
         require('plugins.LSP.config').setup()
-        require('mason-lspconfig').setup()
+        require('mason-lspconfig').setup{
+            ensure_installed = { "rust_analyzer", "pyright", "json-lsp" }
+        }
         require('mason-lspconfig').setup_handlers {
             function(server_name)
                 local on_attach = require("plugins.LSP.config").on_attach
@@ -35,6 +37,12 @@ return {
                             },
                         },
                     },
+                }
+            end,
+
+            ["pyright"] = function()
+                require("lspconfig").pyright.setup {
+                    capabilities = require('cmp_nvim_lsp').default_capabilities(),
                 }
             end,
 
