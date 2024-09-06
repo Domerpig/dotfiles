@@ -25,6 +25,7 @@ return {
             { "<leader>e", "<cmd>Neotree toggle<cr>", desc="Explorer"},
             { "<leader>F", "<cmd>lua require('telescope.builtin').live_grep({sorting_strategy='ascending'})<cr>", desc="Find Text"},
             { "<leader>f", "<cmd>lua require('telescope.builtin').live_grep({sorting_strategy='ascending',search_dirs={vim.fn.expand('%:p')}})<cr>", desc="Find Text within open file"},
+            { "<leader>m", "<cmd>MarkdownPreviewToggle<cr>", desc="Toggle Markdown preview"},
             ----- LSP -----
             { "<leader>l", group="LSP"},
             { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc="Code Action"},

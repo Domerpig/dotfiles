@@ -15,7 +15,7 @@ return {
 
                 local opts = {
                     on_attach = on_attach,
-                    capabilities = capabilities,
+                    capabilities = capabilities
                 }
 
                 require("lspconfig")[server_name].setup(opts)
@@ -23,9 +23,7 @@ return {
 
             ['rust_analyzer'] = function()
                 require("lspconfig").rust_analyzer.setup {
-                    flags = flags,
-                    capabilities = capabilities,
-                    on_attach = on_attach,
+                    capabilities = require('cmp_nvim_lsp').default_capabilities(),
                     settings = {
                         ['rust-analyzer'] = {
                             cargo = {
@@ -37,19 +35,6 @@ return {
                             },
                         },
                     },
-                }
-            end,
-
-            ["pyright"] = function()
-                require("lspconfig").pyright.setup {
-                    capabilities = capabilities,
-                    settings = {
-                        python = {
-                            analysis = {
-                                ignore = { '*' }
-                            }
-                        }
-                    }
                 }
             end,
 
