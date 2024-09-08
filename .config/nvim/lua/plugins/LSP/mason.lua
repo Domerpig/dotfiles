@@ -8,7 +8,7 @@ return {
         require('mason').setup()
         require('plugins.LSP.config').setup()
         require('mason-lspconfig').setup{
-            ensure_installed = { "rust_analyzer", "pyright", "json-lsp" }
+            ensure_installed = { "rust_analyzer", "pyright", "jsonls", "clangd" }
         }
         require('mason-lspconfig').setup_handlers {
             function(server_name)
@@ -37,6 +37,12 @@ return {
                             },
                         },
                     },
+                }
+            end,
+
+            ["clangd"] = function()
+                require("lspconfig").pyright.setup {
+                    capabilities = require('cmp_nvim_lsp').default_capabilities(),
                 }
             end,
 
