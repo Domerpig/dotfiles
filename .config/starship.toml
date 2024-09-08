@@ -8,6 +8,7 @@ $git_status\
 $cmd_duration\
 $line_break\
 $python\
+$rust\
 $character"""
 
 [directory]
@@ -25,12 +26,7 @@ style = "bright-black"
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
+diverged = ""
 stashed = "≡"
 
 [git_state]
@@ -49,4 +45,4 @@ style = "bright-black"
 [rust]
 symbol = ""
 style = "bright-black"
-format = '[ $symbol ($version) ]($style)'
+format = "[$symbol ($version) ]($style) "
