@@ -2,13 +2,13 @@ return {
   "lewis6991/gitsigns.nvim",
   lazy = false,
   config = function()
-    require("gitsigns").setup{
+    require("gitsigns").setup({
       signs = {
         add = { text = "▎" },
         change = { text = "▎" },
         delete = { text = "" },
         topdelete = { text = "" },
-        changedelete = { text = "▎"},
+        changedelete = { text = "▎" },
       },
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
       numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
@@ -37,7 +37,7 @@ return {
         relative = "cursor",
         row = 0,
         col = 1,
-      }
-    }
-  end
+      },
+    })
+  end,
 }

@@ -9,5 +9,5 @@ return {
     --   style = "cool"
     -- }
     require("kanagawa").load()
-  end
+  end,
 }

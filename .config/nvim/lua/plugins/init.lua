@@ -1,3 +1,4 @@
 return {
-  { import = "plugins.LSP.mason" }
+  { import = "plugins.LSP.mason" },
 }
+

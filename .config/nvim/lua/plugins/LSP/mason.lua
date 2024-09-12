@@ -12,6 +12,20 @@ return {
         }
         require('mason-lspconfig').setup_handlers {
             function(server_name)
+                -- local on_attach = vim.api.nvim_create_autocmd("CursorHold", {
+                --   buffer = bufnr,
+                --   callback = function()
+                --     local opts = {
+                --       focusable = false,
+                --       close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+                --       border = 'rounded',
+                --       source = 'always',
+                --       prefix = ' ',
+                --       scope = 'cursor',
+                --     }
+                --     vim.diagnostic.open_float(nil, opts)
+                --   end
+                -- })
                 local on_attach = require("plugins.LSP.config").on_attach
                 local capabilities = require("plugins.LSP.config").capabilities
 
@@ -41,7 +55,7 @@ return {
             end,
 
             ["clangd"] = function()
-                require("lspconfig").pyright.setup {
+                require("lspconfig").clangd.setup {
                     capabilities = require('cmp_nvim_lsp').default_capabilities(),
                 }
             end,
