@@ -1,17 +1,31 @@
 return {
-  'mhartington/formatter.nvim',
-  opts = {
-      -- add any options here
-  },
+  "stevearc/conform.nvim",
   lazy = false,
   config = function()
-    require("formatter").setup{
-            filetype = {
-                python = {
-                    require("formatter.filetypes.python").black
-                }
-            }
-        }
-  end
-}
+    require("conform").setup({
+      formatters_by_ft = {
+        python = { "black", "ruff" },
+        c = { "clang-format" },
+        rust = { lsp_format = "prefer" },
+        lua = { "stylua" },
+      },
 
+      formatters = {
+        clang_format = {
+          append_args = {
+            "xxxxx",
+            "{IndentWidth: 4}",
+          },
+        },
+        stylua = {
+          append_args = {
+            "--indent-width",
+            "2",
+            "--indent-type",
+            "Spaces",
+          },
+        },
+      },
+    })
+  end,
+}
