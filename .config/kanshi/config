@@ -1,17 +1,17 @@
-output "Acer Technologies VG270U P 0x912094FE" alias $mainDisplay
-output  "Acer Technologies VG270 TEGEE0018512" alias $secondaryDisplay
+output  "LG Electronics LG ULTRAGEAR 407NTVSAQ439" alias $mainDisplay
+output "Acer Technologies VG270U P 0x912094FE" alias $secondaryDisplay
 output "AOC 2470W GGJGCHA013780" alias $horizontalDisplay
 
 
 profile default {
     output $secondaryDisplay {
-        position 0,420
+        position 0,240
     }
     output $mainDisplay {
-        position 1920,240
+        position 2560,240
     }
     output $horizontalDisplay {
-        position 4480,0
+        position 5120,0
         transform 270
     }
 }

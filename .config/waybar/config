@@ -2,7 +2,7 @@
     {
         "position": "top",
         "layer": "top",
-        "output": "Acer Technologies VG270U P 0x912094FE",
+        "output": "LG Electronics LG ULTRAGEAR 407NTVSAQ439",
         "height": 20,
         "modules-left": [
             "river/tags"
@@ -98,7 +98,7 @@
     {
         "position": "top",
         "layer": "top",
-        "output": "Acer Technologies VG270 TEGEE0018512",
+        "output": "Acer Technologies VG270U P 0x912094FE",
         "height": 18,
         "modules-right": [
             "river/tags"

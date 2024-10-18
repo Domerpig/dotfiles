@@ -2,8 +2,8 @@
 
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
-mainDisplay="Acer Technologies VG270U P 0x912094FE"
-secondaryDisplay="Acer Technologies VG270 TEGEE0018512"
+mainDisplay="LG Electronics LG ULTRAGEAR 407NTVSAQ439"
+secondaryDisplay="Acer Technologies VG270U P 0x912094FE"
 horizontalDisplay="AOC 2470W GGJGCHA013780"
 
 exec kanshi default &
