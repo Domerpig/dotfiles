@@ -5,7 +5,7 @@
         "output": "eDP-1",
         "height": 20,
         "modules-left": [
-            "sway/workspaces"
+            "niri/workspaces"
         ],
         "modules-center": [
             "custom/spotify"
@@ -71,7 +71,7 @@
         "memory": {
             "format": "<span color ='#EE99A0'></span>  {used}GB |"
         },
-        "sway/workspaces": {
+        "niri/workspaces": {
             "format": "{icon}"
         },
         "wireplumber": {
