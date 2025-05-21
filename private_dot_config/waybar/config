@@ -1,0 +1,118 @@
+[
+    {
+        "position": "top",
+        "layer": "top",
+        "output": "eDP-1",
+        "height": 20,
+        "modules-left": [
+            "sway/workspaces"
+        ],
+        "modules-center": [
+            "custom/spotify"
+        ],
+        "modules-right": [
+            "memory",
+            "cpu",
+            "pulseaudio",
+            "network",
+            "bluetooth",
+            "battery",
+            "custom/weather",
+            "clock"
+        ],
+        "clock": {
+            "interval": 10,
+            "format": "<span color='#F5A97F'>󰃰</span> {:%H:%M}",
+            "tooltip-format": "<tt><small>{calendar}</small></tt>",
+            "calendar": {
+                "mode": "month",
+                "on-scroll": 1,
+                "weeks-pos": "left",
+                "format": {
+                    "months": "<span color='#EED49F'><b>{}</b></span>",
+                    "days": "<span color='#DCD7BA'><b>{}</b></span>",
+                    "weeks": "<span color='#7DC4e4'><b>W{}</b></span>",
+                    "weekdays": "<span color='#8BD5CA'><b>{}</b></span>",
+                    "today": "<span color='#A6DA95'><b><u>{}</u></b></span>"
+                }
+            },
+            "actions": {
+                "on-scroll-down": "shift_up",
+                "on-scroll-up": "shift_down"
+            }
+        },
+        "cpu": {
+            "format": "<span color ='#A6DA95'></span>  {usage}%",
+            "interval": 3
+        },
+        "network": {
+            "format-wifi": "<span color = '#8AADF4'>󰖩</span>",
+            "format-ethernet": "󰈀 ",
+            "format-disconnected": "󰣼 ",
+            "tooltip-format-wifi": "{essid}\n{signalStrength}%\n{frequency}GHz"
+        },
+        "bluetooth": {
+            "format": "󰂯",
+            "on-click": "blueman-manager",
+            "tooltip-format-connected": "{device_alias}"
+        },
+        "battery": {
+            "format": "{icon}",
+            "format-icons": ["", "", "", "", ""],
+            "format-charging": "",
+            "tooltip-format": "{capacity}%\n{timeTo}",
+            "states": {
+                "normal": 100,
+                "half": 50,
+                "warning": 20,
+                "critical": 10
+            }
+        },
+        "memory": {
+            "format": "<span color ='#EE99A0'></span>  {used}GB |"
+        },
+        "sway/workspaces": {
+            "format": "{icon}"
+        },
+        "wireplumber": {
+            "format": "{volume}%",
+            "format-muted": "",
+            "on-click": "helvum",
+            "max-volume": 150,
+            "scroll-step": 0.2
+        },
+        "custom/spotify": {
+            "format": "<span color = '#1DB954'></span> {}",
+            "max-length": 60,
+            "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+            "exec-if": "pgrep spotify",
+            "interval": 1,
+            "escape": true,
+            "on-click": "playerctl play-pause"
+        },
+        "custom/weather": {
+            "exec": "${HOME}/.config/waybar/scripts/weather.sh Andernach",
+            "return-type": "json",
+            "format": "{icon} {} |",
+            "format-icons": [
+                "<span color = '#DCD7BA'></span>",
+                "<span color = '#A3D4D5'></span>",
+                "<span color = '#A6DA95'></span>",
+                "<span color = '#FFA066'></span>",
+                "<span color = '#E46876'></span>"
+            ],
+            "tooltip": true,
+            "interval": 600
+        },
+        "pulseaudio": {
+            "on-click": "pavucontrol",
+            "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "format": "<span color = '#EED49F'>{icon}</span>",
+            "format-muted": "󰝟",
+            "format-icons": {
+                "default": ["", "", ""]
+            },
+            "tooltip-format": "{volume}%\n{desc}"
+        }
+    }
+]

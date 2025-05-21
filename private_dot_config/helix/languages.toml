@@ -1,0 +1,18 @@
+[language-server.ruff]
+command = "ruff-lsp"
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+"name" = "css"
+
+[[language]]
+"name" = "bash"
+
+[[language]]
+name = "python"
+language-servers = [
+  { name = "ruff" }
+]

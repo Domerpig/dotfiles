@@ -1,0 +1,17 @@
+output  "LG Electronics LG ULTRAGEAR 407NTVSAQ439" alias $mainDisplay
+output "Acer Technologies VG270U P 0x912094FE" alias $secondaryDisplay
+output "AOC 2470W GGJGCHA013780" alias $horizontalDisplay
+
+
+profile docked {
+    output $secondaryDisplay {
+        position 0,240
+    }
+    output $mainDisplay {
+        position 2560,240
+    }
+    output $horizontalDisplay {
+        position 5120,0
+        transform 270
+    }
+}

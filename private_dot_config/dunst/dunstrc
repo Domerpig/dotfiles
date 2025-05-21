@@ -1,0 +1,20 @@
+[global]
+frame_width = 2
+corner_radius = 10
+follow = mouse
+font = "Fira Code Nerd Font 12"
+
+[urgency_low]
+    background = "#223249"
+    foreground = "#DCD7BA"
+    frame_color = "#56b6c2"
+
+[urgency_normal]
+    background = "#223249"
+    foreground = "#abb2bf"
+    frame_color = "#6A9589"
+
+[urgency_critical]
+    background = "#223249"
+    foreground = "#C34043"
+    frame_color = "#E82424"
