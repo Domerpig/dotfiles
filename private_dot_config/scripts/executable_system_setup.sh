@@ -1,13 +1,13 @@
 #!/bin/bash
 
-sudo dnf update
-sudo dnf copr enable yalter/niri
+sudo dnf -y update
+sudo dnf -y copr enable yalter/niri lihaohong/yazi
 
 # Install Packages
-sudo dnf install fuzzel go git gcc zoxide niri neovim flatpak
+sudo dnf install fuzzel go git gcc zoxide niri neovim flatpak yazi
 
 # uninstall unused packages
-sudo dnf remove alacritty
+sudo dnf remove alacritty nano-default-editor
 
 # Install Flatpaks
 flatpak install -y flathub md.obsidian.Obsidian
@@ -26,8 +26,8 @@ git config --global user.name "Domerpig"
 host="$(hostname)"
 
 if [[ "$host" == "Framework" ]]; then
-    echo "test"
+    ./executable_setup_notebook.sh
 elif [[ "$host" == "PC" ]]; then
-    echo "hi"
+    ./executable_setup_tower.sh
 fi
 
