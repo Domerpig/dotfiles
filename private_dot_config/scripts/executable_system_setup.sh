@@ -31,3 +31,7 @@ elif [[ "$host" == "PC" ]]; then
     ./executable_setup_tower.sh
 fi
 
+# Enable services
+sudo systemctl enable power-profiles-daemon
+sudo systemctl enable --user pipewire
+sudo systemctl enable --user gnome-keyring-daemon
