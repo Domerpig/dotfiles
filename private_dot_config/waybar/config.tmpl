@@ -2,7 +2,7 @@
     {
         "position": "top",
         "layer": "top",
-        "output": "eDP-1",
+        "output": {{- if eq .chezmoi.hostname "Framework"}} "eDP-1" {{- else if eq .chezmoi.hostname "PC" }} "LG Electronics LG ULTRAGEAR 407NTVSAQ439" {{- end }},
         "height": 20,
         "modules-left": [
             "niri/workspaces"
