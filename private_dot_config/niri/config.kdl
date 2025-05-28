@@ -293,6 +293,12 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="foot"
+    open-maximized false
+}
+
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:

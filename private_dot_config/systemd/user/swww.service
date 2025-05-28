@@ -1,0 +1,8 @@
+[Unit]
+PartOf=swww-daemon.service
+After=swww-daemon.service
+Requisite=swww-daemon.service
+
+[Service]
+ExecStart=/usr/bin/swww img /home/dominik/Pictures/Wallpapers/forrest.png
+Restart=on-failure

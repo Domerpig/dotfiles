@@ -1,13 +1,20 @@
 #!/bin/bash
 
+###############################################################################
+################################## Packages ###################################
+###############################################################################
 sudo dnf -y update
 sudo dnf -y copr enable yalter/niri lihaohong/yazi
 
-# Install Packages
 sudo dnf install fuzzel go git gcc zoxide niri neovim flatpak yazi
+
+# Dependencies for swww
+sudo dnf install wayland-devel wayland-protocols-devel lz4-devel
 
 # uninstall unused packages
 sudo dnf remove alacritty nano-default-editor
+
+###############################################################################
 
 # Install Flatpaks
 flatpak install -y flathub md.obsidian.Obsidian
