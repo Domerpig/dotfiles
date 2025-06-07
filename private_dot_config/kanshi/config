@@ -1,6 +1,6 @@
 output  "LG Electronics LG ULTRAGEAR 407NTVSAQ439" alias $mainDisplay
 output "Acer Technologies VG270U P 0x912094FE" alias $secondaryDisplay
-output "AOC 2470W GGJGCHA013780" alias $horizontalDisplay
+output "PNP(AOC) 2470W GGJGCHA013780" alias $horizontalDisplay
 
 
 profile docked {
