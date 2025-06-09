@@ -1,0 +1,8 @@
+[Unit]
+PartOf=udiskie.service
+After=udiskie.service
+Requisite=udiskie.service
+
+[Service]
+ExecStart=udiskie
+Restart=on-failure
