@@ -7,7 +7,7 @@ sudo dnf -y update
 sudo dnf -y copr enable yalter/niri lihaohong/yazi
 
 sudo dnf install fuzzel go git gcc zoxide niri neovim flatpak yazi udiskie     \
-    nextcloud
+    nextcloud zig
 
 # Dependencies for swww
 sudo dnf install wayland-devel wayland-protocols-devel lz4-devel
