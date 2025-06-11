@@ -4,6 +4,7 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "nextcloud --background"
 environment {
     DISPLAY ":0"
 }
