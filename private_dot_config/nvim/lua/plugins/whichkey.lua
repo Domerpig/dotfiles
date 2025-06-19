@@ -31,7 +31,12 @@ return {
       { "<leader>li", "<cmd>LspInfo<CR>", desc = "Info" },
       { "<leader>q", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Quickfix" },
       { "<leader>lf", "<cmd>lua require('conform').format()<CR>", desc = "Format" },
-      {"<leader>ld", "<cmd>lua require('telescope.builtin').diagnostics({sorting_strategy='ascending'})<CR>"},
+      { "<leader>le", "<cmd>lua vim.diagnostic.open_float()<CR>", desc = "Float Diagnostic" },
+      {
+        "<leader>ld",
+        "<cmd>lua require('telescope.builtin').diagnostics({sorting_strategy='ascending'})<CR>",
+        desc = "List diagnostics",
+      },
       { "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic" },
       { "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Prev Diagnostic" },
       { "<leader>ll", "<cmd>lua vim.lsp.codelens.run()<CR>", desc = "CodeLens Action" },
@@ -97,16 +102,16 @@ return {
 
       ----- git -----
       { "<leader>g", group = "git" },
-      { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc="Next Hunk" },
-      { "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc="Prev Hunk" },
-      { "<leader>gb", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc="Blame" },
-      { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc="Preview Hunk" },
-      { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc="Reset Hunk" },
-      { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc="Reset Buffer" },
-      { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc="Stage Hunk" },
-      { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc="Undo Stage Hunk" },
-      { "<leader>go", "<cmd>Telescope git_status<cr>", desc="Open changed file" },
-      { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc="Diff" },
+      { "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "Next Hunk" },
+      { "<leader>gk", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "Prev Hunk" },
+      { "<leader>gb", "<cmd>lua require 'gitsigns'.blame_line()<cr>", desc = "Blame" },
+      { "<leader>gp", "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", desc = "Preview Hunk" },
+      { "<leader>gr", "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk" },
+      { "<leader>gR", "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer" },
+      { "<leader>gs", "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", desc = "Stage Hunk" },
+      { "<leader>gu", "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", desc = "Undo Stage Hunk" },
+      { "<leader>go", "<cmd>Telescope git_status<cr>", desc = "Open changed file" },
+      { "<leader>gd", "<cmd>Gitsigns diffthis HEAD<cr>", desc = "Diff" },
 
       ---------------------
       ---- Visual mode ----
@@ -126,3 +131,5 @@ return {
     })
   end,
 }
+
+
