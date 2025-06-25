@@ -3,6 +3,7 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
+    "OXY2DEV/markview.nvim",
   },
   config = function()
     ---@diagnostic disable-next-line: missing-fields
