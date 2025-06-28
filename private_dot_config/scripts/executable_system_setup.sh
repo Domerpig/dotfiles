@@ -43,3 +43,6 @@ fi
 sudo systemctl enable power-profiles-daemon
 sudo systemctl enable --user pipewire
 sudo systemctl enable --user gnome-keyring-daemon
+
+# Update default applications
+xdg-mime default org.mozilla.firefox.desktop application/pdf
