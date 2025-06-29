@@ -9,6 +9,7 @@ $cmd_duration\
 $line_break\
 $python\
 $rust\
+$zig\
 $character"""
 
 [directory]
@@ -44,5 +45,10 @@ style = "bright-black"
 
 [rust]
 symbol = ""
+style = "bright-black"
+format = "[$symbol ($version) ]($style) "
+
+[zig]
+symbol = ''
 style = "bright-black"
 format = "[$symbol ($version) ]($style) "
